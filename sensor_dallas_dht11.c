@@ -36,6 +36,10 @@
 #error "Please enable RT_USING_PIN"
 #endif
 
+#ifndef RT_SENSOR_VENDOR_DALLAS
+#define RT_SENSOR_VENDOR_DALLAS (7u)
+#endif
+
 #ifndef rt_hw_us_delay
 RT_WEAK void rt_hw_us_delay(rt_uint32_t us)
 {
