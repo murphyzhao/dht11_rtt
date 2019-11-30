@@ -161,6 +161,11 @@ uint8_t dht11_init(rt_base_t pin)
 
     dht11_reset(pin);
     ret = dht11_check(pin);
+    if (ret != 0)
+    {
+        dht11_reset(pin);
+        ret = dht11_check(pin);
+    }
 
     return ret;
 }
